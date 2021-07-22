@@ -1,4 +1,4 @@
-package com.lokischiffer.mintictest;
+package com.equipo4.mercadoapp;
 
 import org.junit.Test;
 

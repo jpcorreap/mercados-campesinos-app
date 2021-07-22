@@ -1,2 +1,2 @@
-rootProject.name = "MinTic Test"
+rootProject.name = "Mercado App"
 include ':app'
