@@ -14,29 +14,32 @@
 
         <SearchView
             android:id="@+id/searchView"
-            android:iconifiedByDefault="true"
-            android:layout_width="330dp"
+            android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:iconifiedByDefault="true"
             android:inputType="text"
             android:queryHint="Buscar campañas" />
 
-        <ImageButton
-            android:id="@+id/imageButtonMenu"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_toEndOf="@+id/searchView"
-            android:background="@android:color/transparent"
-            android:src="@drawable/ic_baseline_menu_24"
-            tools:src="@drawable/ic_baseline_menu_24" />
+        <!--        <ImageButton Se borra este el dia 29/07/2021 para ajustar
+                                 la barra de busqueda mejor-->
+        <!--            android:id="@+id/imageButtonMenu"-->
+        <!--            android:layout_width="40dp"-->
+        <!--            android:layout_height="40dp"-->
+        <!--            android:layout_alignParentTop="true"-->
+        <!--            android:layout_alignParentEnd="true"-->
+        <!--            android:layout_marginStart="10dp"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            android:layout_marginEnd="8dp"-->
+        <!--            android:layout_toEndOf="@+id/searchView"-->
+        <!--            android:background="@android:color/transparent"-->
+        <!--            android:src="@drawable/ic_baseline_menu_24"-->
+        <!--            tools:src="@drawable/ic_baseline_menu_24" />-->
 
         <LinearLayout
             android:id="@+id/linearLayoutBtn"
@@ -101,13 +104,14 @@
         </LinearLayout>
 
 
+
     </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp"
@@ -117,4 +121,3 @@
 
 
 </LinearLayout>
-
