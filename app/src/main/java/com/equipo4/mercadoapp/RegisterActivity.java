@@ -28,7 +28,7 @@ public class RegisterActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(password == passwordRepeat)
+                if(password.getText().toString().equals(passwordRepeat.getText().toString()))
                     Toast.makeText(RegisterActivity.this, "Listo para registrar", Toast.LENGTH_SHORT).show();
                 else
                     Toast.makeText(RegisterActivity.this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
