@@ -74,12 +74,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 //            case R.id.button_registrar:
 //                msg = "Clic desde registrarse";
+//                pantalla = new Intent(this, VistaCampActivity.class);
 //                break;
 //            case R.id.button_iniciarSesion:
 //                msg = "Clic desde login";
+//                pantalla = new Intent(this, VistaCampActivity.class);
 //                break;
-//            default:
-//                throw new IllegalArgumentException();
+
+            default:
+                throw new IllegalArgumentException();
         }
         Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
 
