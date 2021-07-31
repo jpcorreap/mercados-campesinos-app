@@ -5,6 +5,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:cardCornerRadius="10dp"
+    app:cardPreventCornerOverlap="false"
     android:layout_margin="8dp"
     android:backgroundTint="#719C5A"
     app:cardBackgroundColor="#FFFFFF"
