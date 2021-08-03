@@ -6,6 +6,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import com.equipo4.mercadoapp.model.User;
+
 public class OpenHelper extends SQLiteOpenHelper {
     public static final String DB_NAME = "db_mercado.db";
     public static final int DB_VERSION = 1;
@@ -16,7 +18,13 @@ public class OpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+        db.execSQL("CREATE TABLE " + User.TABLE + "(" +
+                User.USERNAME+" TEXT NOT NULL PRIMARY KEY,"+
+                User.NAME+" TEXT NOT NULL,"+
+                User.EMAIL+" TEXT NOT NULL UNIQUE,"+
+                User.PHONE+" INTEGER NOT NULL,"+
+                User.PASSWORD+" TEXT NOT NULL"+
+                ");");
     }
 
     @Override
