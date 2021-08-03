@@ -1,6 +1,8 @@
 package com.equipo4.mercadoapp.sqlite;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -37,5 +39,18 @@ public class OpenHelper extends SQLiteOpenHelper {
     }
     public void closeDB(){
         this.close();
+    }
+
+    public long insert(String table, ContentValues values){
+        return getWritableDatabase().insert(table, null, values);
+    }
+    public int update(String table, ContentValues values, String where){
+        return getWritableDatabase().update(table, values, where, null);
+    }
+    public int delete(String table, String where){
+        return getWritableDatabase().delete(table, where, null);
+    }
+    public Cursor select(String sql, @Nullable String[] whereArgs){
+        return getWritableDatabase().rawQuery(sql, whereArgs);
     }
 }
