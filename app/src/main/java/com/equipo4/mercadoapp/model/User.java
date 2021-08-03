@@ -1,17 +1,19 @@
 package com.equipo4.mercadoapp.model;
 
+import android.content.ContentValues;
+
 import java.io.Serializable;
 
 public class User implements Serializable {
     public static final String TABLE = "userTable", NAME = "nameUser", USERNAME = "username",
             EMAIL = "emailUser", PASSWORD = "passUser", PHONE = "phoneUser";
-    private String personName, username, mail, password;
+    private String personName, username, email, password;
     private int phone;
 
-    public User(String personName, String username, String mail, String password, int phone) {
+    public User(String personName, String username, String email, String password, int phone) {
         this.personName = personName;
         this.username = username;
-        this.mail = mail;
+        this.email = email;
         this.password = password;
         this.phone = phone;
     }
@@ -21,8 +23,8 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public User(String mail, String password) {
-        this.mail = mail;
+    public User(String email, String password) {
+        this.email = email;
         this.password = password;
     }
 
@@ -42,12 +44,12 @@ public class User implements Serializable {
         this.username = username;
     }
 
-    public String getMail() {
-        return mail;
+    public String getEmail() {
+        return email;
     }
 
-    public void setMail(String mail) {
-        this.mail = mail;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
@@ -64,5 +66,15 @@ public class User implements Serializable {
 
     public void setPhone(int phone) {
         this.phone = phone;
+    }
+
+    public ContentValues getContentValues(){
+        ContentValues values = new ContentValues();
+        values.put(NAME, personName);
+        values.put(USERNAME, username);
+        values.put(EMAIL, email);
+        values.put(PASSWORD, password);
+        values.put(PHONE, phone);
+        return values;
     }
 }
