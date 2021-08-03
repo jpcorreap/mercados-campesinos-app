@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="10dp"
-    app:cardPreventCornerOverlap="false"
     android:layout_margin="8dp"
     android:backgroundTint="#719C5A"
     app:cardBackgroundColor="#FFFFFF"
-    app:cardElevation="6dp">
-<!--30/07/2021 Se cambiaron los formatos de los textview y se ajustaron los margenes, se cambio la posicion, tamaño y tipo de iconos-->
-<!--Se cambio la ubicacion de la cardview y el color de fondo-->
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    android:animateLayoutChanges="true"
+    app:cardUseCompatPadding="true">
+    <!--30/07/2021 Se cambiaron los formatos de los textview y se ajustaron los margenes, se cambio la posicion, tamaño y tipo de iconos-->
+    <!--Se cambio la ubicacion de la cardview y el color de fondo-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="250dp">
 
         <ImageView
-            android:id="@+id/imageViewFarmer"
+            android:id="@+id/imgMarket"
             android:layout_width="114dp"
             android:layout_height="106dp"
             android:layout_alignParentStart="true"
@@ -35,7 +37,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="16dp"
             android:layout_marginTop="15dp"
-            android:layout_toEndOf="@+id/imageViewFarmer"
+            android:layout_toEndOf="@+id/imgMarket"
             android:text="@string/CardTitle"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -63,7 +65,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
-            android:layout_toEndOf="@+id/imageViewFarmer"
+            android:layout_toEndOf="@+id/imgMarket"
             android:text="@string/ComentCard"
             android:textSize="12sp"
             android:textStyle="italic" />
@@ -75,7 +77,7 @@
             android:layout_below="@+id/textViewComent"
             android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
-            android:layout_toEndOf="@+id/imageViewFarmer"
+            android:layout_toEndOf="@+id/imgMarket"
             android:text="@string/Place"
             android:textSize="12sp"
             android:textStyle="bold" />
@@ -100,7 +102,7 @@
             android:layout_below="@+id/textViewPlace"
             android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
-            android:layout_toEndOf="@+id/imageViewFarmer"
+            android:layout_toEndOf="@+id/imgMarket"
             android:text="@string/DirectionTitle"
             android:textSize="12sp"
             android:textStyle="bold" />
@@ -122,13 +124,13 @@
             android:id="@+id/textViewMailTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageViewFarmer"
+            android:layout_below="@+id/imgMarket"
             android:layout_alignParentStart="true"
             android:layout_marginStart="16dp"
             android:layout_marginTop="30dp"
             android:text="@string/EmailTitle"
             android:textSize="12sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewMail"
@@ -156,7 +158,7 @@
             android:layout_marginTop="10dp"
             android:text="@string/PhoneTitle"
             android:textSize="12sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewPhoneNumber"
