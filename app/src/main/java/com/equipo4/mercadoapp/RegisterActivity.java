@@ -41,7 +41,7 @@ public class RegisterActivity extends AppCompatActivity {
     private void registrarUser() {
         User user = new User(name.getText().toString(), username.getText().toString(),
                 email.getText().toString(), password.getText().toString(),
-                Integer.parseInt(phone.getText().toString()));
+                Long.parseLong(phone.getText().toString()));
         long rows = helper.insert(User.TABLE, user.getContentValues());
         if(rows > 0)
             Toast.makeText(this, "Se registro el usuario correctamente", Toast.LENGTH_SHORT).show();

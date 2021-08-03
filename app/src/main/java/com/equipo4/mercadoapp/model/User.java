@@ -8,9 +8,9 @@ public class User implements Serializable {
     public static final String TABLE = "userTable", NAME = "nameUser", USERNAME = "username",
             EMAIL = "emailUser", PASSWORD = "passUser", PHONE = "phoneUser";
     private String personName, username, email, password;
-    private int phone;
+    private long phone;
 
-    public User(String personName, String username, String email, String password, int phone) {
+    public User(String personName, String username, String email, String password, long phone) {
         this.personName = personName;
         this.username = username;
         this.email = email;
@@ -60,11 +60,11 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public int getPhone() {
+    public long getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(long phone) {
         this.phone = phone;
     }
 
