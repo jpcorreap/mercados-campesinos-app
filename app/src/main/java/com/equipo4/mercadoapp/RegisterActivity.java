@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.equipo4.mercadoapp.sqlite.OpenHelper;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -14,6 +15,9 @@ public class RegisterActivity extends AppCompatActivity {
     //UI
     TextInputEditText name, username, mail, phone, password, passwordRepeat;
     Button register;
+
+    //SQLite
+    OpenHelper helper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,14 +29,11 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void events() {
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(password.getText().toString().equals(passwordRepeat.getText().toString()))
-                    Toast.makeText(RegisterActivity.this, "Listo para registrar", Toast.LENGTH_SHORT).show();
-                else
-                    Toast.makeText(RegisterActivity.this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
-            }
+        register.setOnClickListener(v -> {
+            if(password.getText().toString().equals(passwordRepeat.getText().toString()))
+                Toast.makeText(RegisterActivity.this, "Listo para registrar", Toast.LENGTH_SHORT).show();
+            else
+                Toast.makeText(RegisterActivity.this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
         });
     }
 
@@ -44,6 +45,7 @@ public class RegisterActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         passwordRepeat = findViewById(R.id.passwordRepeat);
         register = findViewById(R.id.registerFarmer);
+        helper = new OpenHelper(this);
     }
 
 }
