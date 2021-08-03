@@ -29,6 +29,13 @@ public class OpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL("DROP TABLE IF EXISTS "+User.TABLE);
+        onCreate(db);
+    }
+    public void openDB(){
+        getWritableDatabase();
+    }
+    public void closeDB(){
+        this.close();
     }
 }
