@@ -3,6 +3,8 @@ package com.equipo4.mercadoapp.model;
 import java.io.Serializable;
 
 public class User implements Serializable {
+    public static final String TABLE = "userTable", NAME = "nameUser", USERNAME = "username",
+            EMAIL = "emailUser", PASSWORD = "passUser", PHONE = "phoneUser";
     private String personName, username, mail, password;
     private int phone;
 
