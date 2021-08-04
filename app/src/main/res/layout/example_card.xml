@@ -9,9 +9,8 @@
     android:backgroundTint="#719C5A"
     app:cardBackgroundColor="#FFFFFF"
     app:cardCornerRadius="16dp"
-    app:cardElevation="2dp"
-    android:animateLayoutChanges="true"
-    app:cardUseCompatPadding="true">
+    app:cardElevation="1dp"
+    android:animateLayoutChanges="true">
     <!--30/07/2021 Se cambiaron los formatos de los textview y se ajustaron los margenes, se cambio la posicion, tamaño y tipo de iconos-->
     <!--Se cambio la ubicacion de la cardview y el color de fondo-->
     <RelativeLayout
