@@ -1,4 +1,4 @@
-package com.equipo4.mercadoapp;
+package com.equipo4.mercadoapp.adapter;
 //*create el 02/08/2021 para probes
 
 import android.os.Build;
@@ -8,7 +8,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.equipo4.mercadoapp.R;
+import com.equipo4.mercadoapp.model.ItemList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,9 +21,11 @@ import java.util.stream.Collectors;
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.RecyclerHolder> {
     private List<ItemList> items;
     private List<ItemList> originalItems;
+    private RecyclerItemClick itemClick;
 
-    public RecyclerAdapter(List<ItemList> items) {
+    public RecyclerAdapter(List<ItemList> items,RecyclerItemClick itemClick) {
         this.items = items;
+        this.itemClick = itemClick;
         originalItems = new ArrayList<>();
         originalItems.addAll(items);
     }
@@ -31,8 +37,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
     }
 
     @Override
-    public void onBindViewHolder(RecyclerHolder holder, int position) {
-        ItemList item = items.get(position);
+    public void onBindViewHolder(@NonNull final RecyclerHolder holder,final int position) {
+        final ItemList item = items.get(position);
         holder.imgMarket.setImageResource(item.getImgMarket());
         holder.counter.setText(item.getCounter());
         holder.coment.setText(item.getComent());
@@ -40,6 +46,23 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         holder.direction.setText(item.getDirection());
         holder.email.setText(item.getEmail());
         holder.telephone.setText(item.getTelephone());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                itemClick.itemClick(item);
+            }
+        });
+        //*create el 03/08/2021 para probes
+        /*holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(holder.itemView.getContext(), DetailActivity.class);
+                intent.putExtra("itemDetail",item);
+                holder.itemView.getContext().startActivity(intent);
+
+            }
+        });*/
 
 
     }
@@ -95,5 +118,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
 
         }
 
+    }
+
+    public interface RecyclerItemClick{
+        void itemClick(ItemList item);
     }
 }
