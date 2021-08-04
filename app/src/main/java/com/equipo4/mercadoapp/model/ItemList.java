@@ -1,6 +1,9 @@
-package com.equipo4.mercadoapp;
+package com.equipo4.mercadoapp.model;
+
+import java.io.Serializable;
+
 //*create el 02/08/2021 para probes
-public class ItemList {
+public class ItemList implements Serializable {
     private int imgMarket;
     private String counter;
     private String coment;
