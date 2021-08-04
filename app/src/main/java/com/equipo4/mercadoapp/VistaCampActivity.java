@@ -1,11 +1,13 @@
 package com.equipo4.mercadoapp;
 //create el 26/07/2021 para probes
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.LinearLayout;
+import android.widget.ImageView;
 import android.widget.SearchView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -13,16 +15,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.equipo4.mercadoapp.adapter.RecyclerAdapter;
+import com.equipo4.mercadoapp.model.ItemList;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class VistaCampActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
+public class VistaCampActivity extends AppCompatActivity implements SearchView.OnQueryTextListener,RecyclerAdapter.RecyclerItemClick {
     //*create el 02/08/2021 para probes
     private List<ItemList> items;
     private RecyclerView rvLista;
     private RecyclerAdapter adapter;
     private SearchView svSearch;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,7 @@ public class VistaCampActivity extends AppCompatActivity implements SearchView.O
     private void initviews(){
         rvLista = findViewById(R.id.recyclerView);
         svSearch = findViewById(R.id.searchView);
+
     }
     //*create el 02/08/2021 para probes
     private void initValues(){
@@ -44,8 +49,9 @@ public class VistaCampActivity extends AppCompatActivity implements SearchView.O
         rvLista.setLayoutManager(manager);
 
         items = getItems();
-        adapter = new RecyclerAdapter(items);
+        adapter = new RecyclerAdapter(items,this);
         rvLista.setAdapter(adapter);
+
     }
     //*create el 02/08/2021 para probes
     private void initListener(){
@@ -102,5 +108,12 @@ public class VistaCampActivity extends AppCompatActivity implements SearchView.O
     public boolean onQueryTextChange(String newText) {
         adapter.filter(newText);
         return false;
+    }
+
+    @Override
+    public void itemClick(ItemList item) {
+        Intent intent = new Intent(this,DetailActivity.class);
+        intent.putExtra("itemDetail",item);
+        startActivity(intent);
     }
 }
