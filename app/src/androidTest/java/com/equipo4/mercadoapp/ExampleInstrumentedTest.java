@@ -44,10 +44,19 @@ public class ExampleInstrumentedTest {
 
     @Test
     public void insertUser(){
+        //Test to ensure a new user is created
         User user = new User("Pepito Perez", "Pepito35", "pepito35@hotmail.com",
                 "prueba51","3101234567");
         long rows = helper.insert(User.TABLE, user.getContentValues());
-        //assertNotEquals(-1, rows);
+        assertNotEquals(-1, rows);
+    }
+
+    @Test
+    public void negateInsertUser(){
+        //Test to prove the db doesn't allow username or email repetitions
+        User user = new User("Pepito Perez", "Pepito35", "pepito35@hotmail.com",
+                "prueba51","3101234567");
+        long rows = helper.insert(User.TABLE, user.getContentValues());
         assertEquals(rows, -1);
     }
 }
