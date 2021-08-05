@@ -31,7 +31,6 @@ public class RegisterActivity extends AppCompatActivity {
     private void events() {
         register.setOnClickListener(v -> {
             if(password.getText().toString().equals(passwordRepeat.getText().toString()))
-                //Toast.makeText(RegisterActivity.this, "Listo para registrar", Toast.LENGTH_SHORT).show();
                 registrarUser();
             else
                 Toast.makeText(RegisterActivity.this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
