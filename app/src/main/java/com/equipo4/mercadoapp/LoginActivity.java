@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -11,7 +13,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
-    TextView register;
+    TextView register, recover;
+    EditText usuario, password;
+    Button ingresar;
+    CheckBox remember;
    // Button loginButton;
 
     @Override
@@ -37,6 +42,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                 startActivity(pantalla); */
         register.setOnClickListener(this);
+        ingresar.setOnClickListener(this);
+        recover.setOnClickListener(this);
+
+
             }
 
 
@@ -46,8 +55,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         Intent pantalla = null;
         String msg = "";
         switch (v.getId()) {
+            case R.id.ingresarLogin:
+                msg = "Clic desde Ingresar";
+                pantalla = new Intent(this, MainActivity.class);
+                break;
+            case R.id.recoverLogin:
+                msg = "Clic desde ¿Olvidaste la contraseña?";
+                pantalla = new Intent(this, MainActivity.class);
+                break;
             case R.id.registerMain:
-                msg = "Clic";
+                msg = "Clic desde Registrar";
                 pantalla = new Intent(this, MainActivity.class);
                 break;
             default:
@@ -62,6 +79,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void init(){
 
         register = findViewById(R.id.registerMain);
+        usuario = findViewById(R.id.usuarioLogin2);
+        password = findViewById(R.id.passwordLogin2);
+        remember = findViewById(R.id.rememberLogin);
+        ingresar = findViewById(R.id.ingresarLogin);
+        recover = findViewById(R.id.recoverLogin);
+
+
        // logiButton = findViewById(R.id.registerMain);
 
 
