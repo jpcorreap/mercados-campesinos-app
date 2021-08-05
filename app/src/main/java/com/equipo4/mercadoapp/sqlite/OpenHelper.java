@@ -12,7 +12,7 @@ import com.equipo4.mercadoapp.model.User;
 
 public class OpenHelper extends SQLiteOpenHelper {
     public static final String DB_NAME = "db_mercado.db";
-    public static final int DB_VERSION = 1;
+    public static final int DB_VERSION = 2;
 
     public OpenHelper(@Nullable Context context) {
         super(context, DB_NAME, null, DB_VERSION);
@@ -24,7 +24,7 @@ public class OpenHelper extends SQLiteOpenHelper {
                 User.USERNAME+" TEXT NOT NULL PRIMARY KEY,"+
                 User.NAME+" TEXT NOT NULL,"+
                 User.EMAIL+" TEXT NOT NULL UNIQUE,"+
-                User.PHONE+" INTEGER NOT NULL,"+
+                User.PHONE+" TEXT NOT NULL,"+
                 User.PASSWORD+" TEXT NOT NULL"+
                 ");");
     }
