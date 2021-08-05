@@ -30,6 +30,13 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void events() {
         register.setOnClickListener(v -> {
+            if(name.getText().toString().equals("") || username.getText().toString().equals("") ||
+                    email.getText().toString().equals("") || phone.getText().toString().equals("") ||
+                    password.getText().toString().equals("") || password.getText().toString().equals("")){
+                Toast.makeText(RegisterActivity.this, "Datos incompletos\n" +
+                        "Por favor llenar todos los espacios", Toast.LENGTH_SHORT).show();
+                return;
+            }
             if(password.getText().toString().equals(passwordRepeat.getText().toString()))
                 registrarUser();
             else
