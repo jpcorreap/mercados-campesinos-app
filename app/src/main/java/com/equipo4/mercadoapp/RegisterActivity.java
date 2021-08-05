@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.equipo4.mercadoapp.model.User;
 import com.equipo4.mercadoapp.sqlite.OpenHelper;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -33,8 +34,7 @@ public class RegisterActivity extends AppCompatActivity {
             if(name.getText().toString().equals("") || username.getText().toString().equals("") ||
                     email.getText().toString().equals("") || phone.getText().toString().equals("") ||
                     password.getText().toString().equals("") || password.getText().toString().equals("")){
-                Toast.makeText(RegisterActivity.this, "Datos incompletos\n" +
-                        "Por favor llenar todos los espacios", Toast.LENGTH_SHORT).show();
+                Snackbar.make(v, "Datos incompletos\nPor favor llenar todos los espacios", Snackbar.LENGTH_SHORT).show();
                 return;
             }
             if(password.getText().toString().equals(passwordRepeat.getText().toString()))
