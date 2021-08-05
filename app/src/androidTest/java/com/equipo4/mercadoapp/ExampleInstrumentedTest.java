@@ -45,7 +45,7 @@ public class ExampleInstrumentedTest {
     @Test
     public void insertUser(){
         User user = new User("Pepito Perez", "Pepito35", "pepito35@hotmail.com",
-                "prueba51", Long.parseLong("3101234567"));
+                "prueba51","3101234567");
         long rows = helper.insert(User.TABLE, user.getContentValues());
         //assertNotEquals(-1, rows);
         assertEquals(rows, -1);

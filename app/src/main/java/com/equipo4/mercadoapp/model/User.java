@@ -7,10 +7,9 @@ import java.io.Serializable;
 public class User implements Serializable {
     public static final String TABLE = "userTable", NAME = "nameUser", USERNAME = "username",
             EMAIL = "emailUser", PASSWORD = "passUser", PHONE = "phoneUser";
-    private String personName, username, email, password;
-    private long phone;
+    private String personName, username, email, password, phone;
 
-    public User(String personName, String username, String email, String password, long phone) {
+    public User(String personName, String username, String email, String password, String phone) {
         this.personName = personName;
         this.username = username;
         this.email = email;
@@ -60,11 +59,11 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public long getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(long phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
