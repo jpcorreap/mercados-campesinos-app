@@ -17,7 +17,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     EditText usuario, password;
     Button ingresar;
     CheckBox remember;
-   // Button loginButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +36,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         ingresar.setOnClickListener(this);
         recover.setOnClickListener(this);
 
-
-            }
-
+    }
 
     @Override
     public void onClick(View v) {
@@ -62,11 +59,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             default:
                 throw new IllegalArgumentException();
         }
-            Toast.makeText(LoginActivity.this, msg, Toast.LENGTH_SHORT).show();
-            startActivity(pantalla);
+        Toast.makeText(LoginActivity.this, msg, Toast.LENGTH_SHORT).show();
+        startActivity(pantalla);
 
     }
-
 
     private void init(){
 
@@ -76,10 +72,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         remember = findViewById(R.id.rememberLogin);
         ingresar = findViewById(R.id.ingresarLogin);
         recover = findViewById(R.id.recoverLogin);
-
-
-       // logiButton = findViewById(R.id.registerMain);
-
 
     }
 
