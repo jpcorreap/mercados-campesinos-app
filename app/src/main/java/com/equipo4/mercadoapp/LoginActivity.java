@@ -57,15 +57,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         switch (v.getId()) {
             case R.id.ingresarLogin:
                 msg = "Clic desde Ingresar";
-                pantalla = new Intent(this, MainActivity.class);
+                pantalla = new Intent(this, AppCompatActivity.class);
                 break;
             case R.id.recoverLogin:
                 msg = "Clic desde ¿Olvidaste la contraseña?";
-                pantalla = new Intent(this, MainActivity.class);
+                pantalla = new Intent(this, RememberActivity.class);
                 break;
             case R.id.registerMain:
                 msg = "Clic desde Registrar";
-                pantalla = new Intent(this, MainActivity.class);
+                pantalla = new Intent(this, RegisterActivity.class);
                 break;
             default:
                 throw new IllegalArgumentException();
