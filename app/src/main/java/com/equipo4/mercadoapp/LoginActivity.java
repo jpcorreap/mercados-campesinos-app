@@ -33,14 +33,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void events() {
 
-      /*  register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent pantalla= null;
-                pantalla = new Intent( this, MainActivity.class);
-                Toast.makeText( LoginActivity.this, "click", Toast.LENGTH_SHORT).show();
-
-                startActivity(pantalla); */
         register.setOnClickListener(this);
         ingresar.setOnClickListener(this);
         recover.setOnClickListener(this);
