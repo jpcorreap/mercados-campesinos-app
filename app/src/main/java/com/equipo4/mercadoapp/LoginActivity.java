@@ -24,7 +24,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         // TODO check which view display
         setContentView(R.layout.activity_login);
 
-
         init();
         events();
 
