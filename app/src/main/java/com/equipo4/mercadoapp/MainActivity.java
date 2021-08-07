@@ -49,15 +49,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            }
 //        });
         verCampaign.setOnClickListener(this);
-//        register.setOnClickListener(this);
-//        login.setOnClickListener(this);
+        register.setOnClickListener(this);
+        login.setOnClickListener(this);
 
     }
 
     //*create el 26/07/2021 para probes
     private void init() {
-//        register = findViewById(R.id.button_registrar);
-//        login = findViewById(R.id.button_iniciarSesion);
+        register = findViewById(R.id.button_registrar);
+        login = findViewById(R.id.button_iniciarSesion);
         verCampaign = findViewById(R.id.button_verCampaña);
 
     }
@@ -72,14 +72,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 msg = "Clic desde ver Campaña";
                 pantalla = new Intent(this, VistaCampActivity.class);
                 break;
-//            case R.id.button_registrar:
-//                msg = "Clic desde registrarse";
-//                pantalla = new Intent(this, VistaCampActivity.class);
-//                break;
-//            case R.id.button_iniciarSesion:
-//                msg = "Clic desde login";
-//                pantalla = new Intent(this, VistaCampActivity.class);
-//                break;
+            case R.id.button_registrar:
+                msg = "Clic desde registrarse";
+                pantalla = new Intent(this, RegisterActivity.class);
+                break;
+            case R.id.button_iniciarSesion:
+                msg = "Clic desde login";
+                pantalla = new Intent(this, LoginActivity.class);
+                break;
 
             default:
                 throw new IllegalArgumentException();
