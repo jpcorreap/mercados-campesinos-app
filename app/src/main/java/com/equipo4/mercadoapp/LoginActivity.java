@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         switch (v.getId()) {
             case R.id.ingresarLogin:
                 msg = "Clic desde Ingresar";
-                pantalla = new Intent(this, AppCompatActivity.class);
+                pantalla = new Intent(this, VistaCampActivity.class);
                 break;
             case R.id.recoverLogin:
                 msg = "Clic desde ¿Olvidaste la contraseña?";
