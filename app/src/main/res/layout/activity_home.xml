@@ -38,41 +38,42 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="550dp"
+        android:layout_marginTop="202dp"
         android:backgroundTint="#31A05F"
         android:text="Registrarse"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_iconoApp" />
 
     <Button
         android:id="@+id/button_verCampaña"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="#31A05F"
         android:text="Ver campaña"
         android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/textView_footer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_iniciarSesion" />
 
     <Button
         android:id="@+id/button_iniciarSesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="202dp"
         android:layout_marginEnd="24dp"
         android:backgroundTint="#31A05F"
         android:text="Iniciar sesion"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/button_registrar"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_iconoApp" />
 
     <TextView
         android:id="@+id/textView_footer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
         android:layout_marginBottom="16dp"
         android:text="Con la creacion de una cuenta o al iniciar sesión, estas aceptando los Términos de uso de Mercadoapp y las Politicas de Privacidad"
         android:textAlignment="center"
@@ -80,16 +81,15 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_iniciarSesion" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView_iconoApp"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="53dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView_fondo"
+        app:layout_constraintTop_toBottomOf="@+id/textView_banner"
         app:srcCompat="@drawable/icono_app" />
 </androidx.constraintlayout.widget.ConstraintLayout>

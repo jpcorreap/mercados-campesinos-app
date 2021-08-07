@@ -80,14 +80,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         else{
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 items.clear();
-                List<ItemList> collect = originalItems.stream().filter(i -> i.getTelephone().toLowerCase().contains(strSearch)).collect(Collectors.toList());
+                List<ItemList> collect = originalItems.stream().filter(i -> i.getTelephone().toLowerCase().contains(strSearch)||i.getComent().toLowerCase().contains(strSearch)).collect(Collectors.toList());
                 items.addAll(collect);
 
             }
             else{
                 items.clear();
                 for (ItemList i : originalItems){
-                    if(i.getTelephone().toLowerCase().contains(strSearch)){
+                    if(i.getTelephone().toLowerCase().contains(strSearch)||i.getComent().toLowerCase().contains(strSearch) ) {
                         items.add(i);
                     }
                 }
