@@ -150,7 +150,7 @@
         android:layout_marginTop="8dp"
         android:maxHeight="200dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_max="200dp"
+        app:layout_constraintHeight_max="130dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         app:srcCompat="@drawable/captura_de_pantalla_2021_07_13_a_la_s__9_53_55_p__m_" />
