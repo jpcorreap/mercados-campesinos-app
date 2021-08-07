@@ -1,234 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:backgroundTint="#719C5A"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="1dp"
+    android:animateLayoutChanges="true">
+    <!--30/07/2021 Se cambiaron los formatos de los textview y se ajustaron los margenes, se cambio la posicion, tamaño y tipo de iconos-->
+    <!--Se cambio la ubicacion de la cardview y el color de fondo-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:cardBackgroundColor="#FFFFFF"
-        app:cardCornerRadius="5dp"
-        app:cardElevation="3dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/imgMarket"
+            android:layout_width="114dp"
+            android:layout_height="106dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/logo_mercado_campesino" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="170dp">
+        <TextView
+            android:id="@+id/textViewTitleMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/imgMarket"
+            android:text="@string/CardTitle"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textViewTitle2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="15dp"
-                android:layout_toEndOf="@+id/imageViewAgricultor"
-                android:text="MERCADO CAMPESINO # "
-                android:textSize="16sp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textViewTitleCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toEndOf="@+id/textViewTitleMain"
+            android:text="@string/CardCounter"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textViewGuest"
-                android:layout_width="219dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textViewTitleCounter"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="20dp"
-                android:layout_toEndOf="@+id/imageViewAgricultor"
-                android:text="Varios agricultores invitados de toda la region sur, contamos con 10 puestos bien ubicados."
-                android:textSize="10sp"
-                android:textStyle="italic" />
+        <TextView
+            android:id="@+id/textViewComent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewTitleCounter"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toEndOf="@+id/imgMarket"
+            android:text="@string/ComentCard"
+            android:textSize="12sp"
+            android:textStyle="italic" />
 
+        <TextView
+            android:id="@+id/textViewPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewComent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/imgMarket"
+            android:text="@string/Place"
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
-            <ImageButton
-                android:id="@+id/imageButtonMap"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/imageButton"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="8dp"
-                android:layout_toStartOf="@+id/imageButton"
-                android:background="@android:color/transparent"
-                app:srcCompat="@drawable/ic_mapa_icon" />
+        <TextView
+            android:id="@+id/textViewPlace2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textViewPlace"
+            android:layout_alignBottom="@+id/textViewPlace"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toEndOf="@+id/textViewPlace"
+            android:text="@string/PlaceName"
+            android:textSize="12sp" />
 
-            <ImageView
-                android:id="@+id/imageViewAgricultor"
-                android:layout_width="114dp"
-                android:layout_height="106dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="15dp"
-                android:background="@android:color/transparent"
-                app:srcCompat="@drawable/ic_farmer_worker"
-                tools:srcCompat="@drawable/ic_farmer_worker" />
+        <TextView
+            android:id="@+id/textViewDirection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewPlace"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/imgMarket"
+            android:text="@string/DirectionTitle"
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textViewTitleCounter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="20dp"
-                android:layout_toEndOf="@+id/textViewTitle2"
-                android:inputType="number"
-                android:text="1"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textViewDirection2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textViewDirection"
+            android:layout_alignBottom="@+id/textViewDirection"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toEndOf="@+id/textViewDirection"
+            android:text="@string/DirectionNom"
+            android:textSize="12sp" />
 
-            <TextView
-                android:id="@+id/textViewLugar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textViewGuest"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="20dp"
-                android:layout_toEndOf="@+id/imageViewAgricultor"
-                android:text="Lugar: "
-                android:textSize="10sp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textViewMailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgMarket"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/EmailTitle"
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textViewLugar2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/textViewLugar"
-                android:layout_alignBottom="@+id/textViewLugar"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="0dp"
-                android:layout_toEndOf="@+id/textViewLugar"
-                android:text="Parque El Divino Niño"
-                android:textSize="10sp" />
+        <TextView
+            android:id="@+id/textViewMail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textViewMailTitle"
+            android:layout_alignBottom="@+id/textViewMailTitle"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toEndOf="@+id/textViewMailTitle"
+            android:inputType="textEmailAddress"
+            android:text="@string/EmailAddress"
+            android:textColor="#3437F6"
+            android:textSize="12sp"
+            tools:ignore="TextViewEdits" />
 
-            <TextView
-                android:id="@+id/textViewDir"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textViewLugar"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="5dp"
-                android:layout_toEndOf="@+id/imageViewAgricultor"
-                android:text="Direccion: "
-                android:textSize="10sp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textViewPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewMailTitle"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/PhoneTitle"
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textViewDir2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/textViewDir"
-                android:layout_alignBottom="@+id/textViewDir"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="0dp"
-                android:layout_toEndOf="@+id/textViewDir"
-                android:text="Cra 32 #63a-15"
-                android:textSize="10sp" />
+        <TextView
+            android:id="@+id/textViewPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textViewPhone"
+            android:layout_alignBottom="@+id/textViewPhone"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toEndOf="@+id/textViewPhone"
+            android:text="@string/PhoneNumber"
+            android:textSize="12sp" />
 
-            <TextView
-                android:id="@+id/textViewMail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/imageViewAgricultor"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="5dp"
-                android:text="Correo: "
-                android:textSize="10sp" />
-
-            <TextView
-                android:id="@+id/textViewMail2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/textViewMail"
-                android:layout_alignBottom="@+id/textViewMail"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="211dp"
-                android:layout_marginBottom="0dp"
-                android:layout_toEndOf="@+id/textViewMail"
-                android:inputType="textEmailAddress"
-                android:text="agricultor@agricultor.com"
-                android:textColor="#3437F6"
-                android:textSize="10sp" />
-
-            <TextView
-                android:id="@+id/textViewTele"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textViewMail"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="5dp"
-                android:text="Telefono: "
-                android:textSize="10sp" />
-
-
-            <TextView
-                android:id="@+id/textViewTele2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/textViewTele"
-                android:layout_alignBottom="@+id/textViewTele"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="141dp"
-                android:layout_marginBottom="0dp"
-                android:layout_toEndOf="@+id/textViewTele"
-                android:text="3001234567"
-                android:textSize="10sp" />
-
-            <ImageButton
-                android:id="@+id/imageButtonWp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/imageButtonMap"
-                android:layout_alignBottom="@+id/imageButtonMap"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="0dp"
-                android:layout_toStartOf="@+id/imageButtonMap"
-                android:background="@android:color/transparent"
-                app:srcCompat="@drawable/ic_whp_icon" />
-
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="8dp"
-                android:background="@android:color/transparent"
-                app:srcCompat="@drawable/ic_favorite"
-                app:tint="#000000" />
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
+        <ImageButton
+            android:id="@+id/imageButtonWp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/icon_whatsapp_32" />
 
 
+        <ImageButton
+            android:id="@+id/imageButtonMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toEndOf="@+id/imageButtonWp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/icon_maps32" />
 
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_favorite32"
+            app:tint="#000000" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

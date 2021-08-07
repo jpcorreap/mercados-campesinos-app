@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DetailActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:backgroundTint="#719C5A"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgDetailMarket">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="410dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/tvDetailTitleMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/CardTitle"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDetailTitleCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toEndOf="@+id/tvDetailTitleMain"
+                android:text="@string/CardCounter"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDetailComent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDetailTitleCounter"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/ComentCard"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvDetailPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDetailComent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/Place"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDetailPlace2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tvDetailPlace"
+                android:layout_alignBottom="@+id/tvDetailPlace"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toEndOf="@+id/tvDetailPlace"
+                android:text="@string/PlaceName"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvDetailDirection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDetailPlace"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/DirectionTitle"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDetailDirection2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tvDetailDirection"
+                android:layout_alignBottom="@+id/tvDetailDirection"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toEndOf="@+id/tvDetailDirection"
+                android:text="@string/DirectionNom"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvDetailMailTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDetailDirection"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/EmailTitle"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDetailMail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tvDetailMailTitle"
+                android:layout_alignBottom="@+id/tvDetailMailTitle"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toEndOf="@+id/tvDetailMailTitle"
+                android:inputType="textEmailAddress"
+                android:text="@string/EmailAddress"
+                android:textColor="#3437F6"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvDetailPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDetailMailTitle"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/PhoneTitle"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDetailPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tvDetailPhone"
+                android:layout_alignBottom="@+id/tvDetailPhone"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toEndOf="@+id/tvDetailPhone"
+                android:text="@string/PhoneNumber"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/imgDetailButtonWp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDetailPhone"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/icon_whatsapp_32" />
+
+
+            <ImageButton
+                android:id="@+id/imgDetailButtonMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDetailPhone"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@+id/imgDetailButtonWp"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/icon_maps32" />
+
+            <ImageButton
+                android:id="@+id/imgDetailButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDetailPhoneNumber"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/ic_favorite32"
+                app:tint="#000000" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imgDetailMarket"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_mercado_campesino" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

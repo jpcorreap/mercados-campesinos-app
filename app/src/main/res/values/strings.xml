@@ -1,3 +1,15 @@
+<!--30/07/2021 Se crearon los string de los titulos de los textos en la example_card.xml-->
 <resources>
     <string name="app_name">Mercado App</string>
+    <string name="CardTitle">MERCADO CAMPESINO #</string>
+    <string name="CardCounter">#</string>
+    <string name="ComentCard">Varios agricultores de la region invitados con muchos productos frescos</string>
+    <string name="Place">Lugar:</string>
+    <string name="PlaceName">Parque El Divino Niño</string>
+    <string name="DirectionTitle">Direccion:</string>
+    <string name="DirectionNom">Cra 32 #63a-15</string>
+    <string name="EmailTitle">Correo:</string>
+    <string name="EmailAddress">agricultor@agricultor.com</string>
+    <string name="PhoneTitle">Telefono:</string>
+    <string name="PhoneNumber">3001234567</string>
 </resources>
