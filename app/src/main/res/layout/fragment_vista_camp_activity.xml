@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Fragment_vistaCamp_activity">
 
+
 <!--    &lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;-->
 <!--    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
 <!--        xmlns:app="http://schemas.android.com/apk/res-auto"-->
@@ -75,11 +76,13 @@
 <!--        </RelativeLayout>-->
 
 
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="120dp"/>
+
 
 <!--        <com.google.android.material.bottomnavigation.BottomNavigationView-->
 <!--            android:id="@+id/bottom_navigation"-->

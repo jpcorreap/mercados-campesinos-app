@@ -49,7 +49,9 @@ public class VistaCampActivity extends AppCompatActivity implements SearchView.O
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnItemSelectedListener(mOnNavigationItemSelectedListener);
 
+
 //        loadFragment(fragment_vistaCamp_activity);
+
     }
     //*create el 10/08/2021 para test
     private final BottomNavigationView.OnItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnItemSelectedListener() {
