@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "585373409701",
+    "project_id": "mercados-campesinos-fbfc7",
+    "storage_bucket": "mercados-campesinos-fbfc7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585373409701:android:963887535d0fa36b6f484c",
+        "android_client_info": {
+          "package_name": "com.equipo4.mercadoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "585373409701-anoe5nmhcqoinq98n3ts0fps6kaepabu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDZhDVu1FODGJ2VvG8AWLmalhQ7GruFpA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "585373409701-anoe5nmhcqoinq98n3ts0fps6kaepabu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
