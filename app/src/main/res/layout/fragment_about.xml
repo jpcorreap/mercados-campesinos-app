@@ -18,13 +18,15 @@
         android:textStyle="bold" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="367dp"
+        android:layout_height="590dp"
         android:layout_marginTop="60dp"
+        android:layout_gravity="center_horizontal"
         android:justificationMode="inter_word"
-        android:text="Los productores y/o agricultores muchas veces no cuentan con los medios para poder comercializar sus productos de manera directa, valiéndose para ello de intermediarios los cuales les ponen muchas trabas y condiciones para la venta, además que le compran los productos con un precio menor al que se consigue en las ciudades.\n\nEs por eso que nace Mercados-campesinos, para unir al agricultor con el usuario final de una manera más directa con posibles compradores por medio de una aplicación móvil.\n\nMercados-campesinos es una app que permita a aquellos que tienen productos agrícolas, venderlos de manera más directa a los consumidores, sea directamente en venta en su finca o a través de un mercado campesino."
-        android:textSize="20sp"
         android:padding="8dp"
+        android:text="Los productores y/o agricultores muchas veces no cuentan con los medios para poder comercializar sus productos de manera directa, valiéndose para ello de intermediarios los cuales les ponen muchas trabas y condiciones para la venta, además que le compran los productos con un precio menor al que se consigue en las ciudades.\n\nEs por eso que nace Mercados-campesinos, para unir al agricultor con el usuario final de una manera más directa con posibles compradores por medio de una aplicación móvil.\n\nMercados-campesinos es una app que permita a aquellos que tienen productos agrícolas, venderlos de manera más directa a los consumidores, sea directamente en venta en su finca o a través de un mercado campesino."
+
+        android:textSize="20sp"
         android:textStyle="italic"
         android:typeface="normal" />
 
