@@ -92,6 +92,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
             else{
                 items.clear();
                 for (ItemList i : originalItems){
+                    if(i.getEstadoItemList() == ItemList.EstadoItemList.ACTUAL){
+                        items.add(i);
+                    }
                     if(i.getCounter().toLowerCase().contains(strSearch)||i.getComent().toLowerCase()
                             .contains(strSearch) ||i.getPlace().toLowerCase()
                             .contains(strSearch)||i.getDirection().toLowerCase()
