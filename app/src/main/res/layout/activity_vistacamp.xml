@@ -1,120 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".VistaCampActivity">
 
-
-
-    <RelativeLayout
+    <FrameLayout
+        android:id="@+id/frame_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"/>
 
-        <SearchView
-            android:id="@+id/searchView"
-            android:iconifiedByDefault="true"
-            android:layout_width="330dp"
-            android:layout_height="40dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:inputType="text"
-            android:queryHint="Buscar campañas" />
-
-        <ImageButton
-            android:id="@+id/imageButtonMenu"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_toEndOf="@+id/searchView"
-            android:background="@android:color/transparent"
-            android:src="@drawable/ic_baseline_menu_24"
-            tools:src="@drawable/ic_baseline_menu_24" />
-
-        <LinearLayout
-            android:id="@+id/linearLayoutBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/searchView"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="8dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/allCamp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Todas las campañas"
-                android:textAlignment="center"
-                android:textSize="10sp" />
-
-            <Button
-                android:id="@+id/actualCamp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Campañas Actuales"
-                android:textAlignment="center"
-                android:textSize="10sp" />
-
-            <Button
-                android:id="@+id/futureCamp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Proximas campañas"
-                android:textAlignment="center"
-                android:textSize="10sp" />
-        </LinearLayout>
-
-    </RelativeLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="629dp"
-        android:layout_marginTop="20dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <include layout="@layout/example_card"/>
-            <include layout="@layout/example_card"/>
-            <include layout="@layout/example_card"/>
-            <include layout="@layout/example_card"/>
-            <include layout="@layout/example_card"/>
-
-
-
-        </LinearLayout>
-
-
-    </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="bottom"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
-        app:menu="@menu/bottom_navigation_menu" />
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:menu="@menu/bottom_navigation_menu" />
 
 
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
-</LinearLayout>
 

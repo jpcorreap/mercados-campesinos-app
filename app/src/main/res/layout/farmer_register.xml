@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:textAlignment="center">
+    tools:context=".RegisterActivity">
 
     <TextView
         android:id="@+id/upperText"
@@ -37,43 +36,50 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
-            <include layout="@layout/user_info"/>
+            android:orientation="vertical">
+
+            <include layout="@layout/user_info" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ubicación de su Finca"
-                android:layout_marginTop="16dp"
                 android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginRight="8dp"
                 android:ems="10"
-                android:textSize="15sp"/>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:text="Ubicación de su Finca"
+                android:textSize="15sp" />
+
+            <fragment
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="8dp"
                 android:minWidth="300dp"
-                android:minHeight="300dp"
-                app:srcCompat="@drawable/ic_flat_map_gray" />
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                tools:context=".RegisterActivity"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="¿Qué productos cultivas?"
-                android:layout_marginTop="16dp"
                 android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginRight="8dp"
                 android:ems="10"
-                android:textSize="15sp"/>
+                android:text="¿Qué productos cultivas?"
+                android:textSize="15sp" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="16dp"
                 android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginRight="8dp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
+
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -83,15 +89,16 @@
                 android:layout_marginRight="8dp">
 
             </HorizontalScrollView>
+
             <Button
-                android:id="@+id/button"
+                android:id="@+id/registerFarmer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Registrar"
+                android:layout_gravity="right"
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="8dp"
-                android:layout_gravity="right"
-                android:backgroundTint="@color/green_dark"/>
+                android:backgroundTint="@color/green_dark"
+                android:text="Registrar" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
