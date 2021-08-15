@@ -1,14 +1,21 @@
 package com.equipo4.mercadoapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private final static int GENERAL_REQUEST_CODE = 400;
 
     //UI *create el 26/07/2021 para probes
     Button register, login, verCampaign;
@@ -18,6 +25,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        //Solicitar los permisos de la acplicación
+        permissionRequest();
         //*create el 26/07/2021 para probes
         init();
         events();
@@ -84,6 +93,24 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
         //*creado el 26/07/2021 para pruebas
         startActivity(pantalla);
+
+    }
+
+    public void permissionRequest(){
+        ActivityCompat.requestPermissions(this,
+                new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION,
+                        Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE},
+                GENERAL_REQUEST_CODE);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        for(int a=0; a < grantResults.length;a++){
+            if(PackageManager.PERMISSION_DENIED == grantResults[a])
+                Toast.makeText(this, permissions[a]+" -> Rechazado", Toast.LENGTH_SHORT).show();
+        }
 
     }
 
