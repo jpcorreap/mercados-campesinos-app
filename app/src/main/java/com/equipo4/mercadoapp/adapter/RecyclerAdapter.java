@@ -80,14 +80,27 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         else{
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                 items.clear();
-                List<ItemList> collect = originalItems.stream().filter(i -> i.getTelephone().toLowerCase().contains(strSearch)||i.getComent().toLowerCase().contains(strSearch)).collect(Collectors.toList());
+                List<ItemList> collect = originalItems.stream().filter(i -> i.getCounter().toLowerCase()
+                        .contains(strSearch)||i.getComent().toLowerCase().contains(strSearch)||i.getPlace()
+                        .toLowerCase().contains(strSearch)||i.getDirection().toLowerCase()
+                        .contains(strSearch)||i.getTelephone().toLowerCase()
+                        .contains(strSearch)||i.getEmail().toLowerCase().contains(strSearch))
+                        .collect(Collectors.toList());
                 items.addAll(collect);
 
             }
             else{
                 items.clear();
                 for (ItemList i : originalItems){
-                    if(i.getTelephone().toLowerCase().contains(strSearch)||i.getComent().toLowerCase().contains(strSearch) ) {
+                    if(i.getEstadoItemList() == ItemList.EstadoItemList.ACTUAL){
+                        items.add(i);
+                    }
+                    if(i.getCounter().toLowerCase().contains(strSearch)||i.getComent().toLowerCase()
+                            .contains(strSearch) ||i.getPlace().toLowerCase()
+                            .contains(strSearch)||i.getDirection().toLowerCase()
+                            .contains(strSearch)||i.getTelephone().toLowerCase()
+                            .contains(strSearch)||i.getEmail().toLowerCase()
+                            .contains(strSearch)) {
                         items.add(i);
                     }
                 }

@@ -11,6 +11,15 @@ public class ItemList implements Serializable {
     private String direction;
     private String email;
     private String telephone;
+    private EstadoItemList estadoItemList;
+
+    public EstadoItemList getEstadoItemList() {
+        return estadoItemList;
+    }
+
+    public void setEstadoItemList(EstadoItemList estadoItemList) {
+        this.estadoItemList = estadoItemList;
+    }
 
     public int getImgMarket() {
         return imgMarket;
@@ -76,7 +85,18 @@ public class ItemList implements Serializable {
         this.direction = direction;
         this.email = email;
         this.telephone = telephone;
+        this.estadoItemList = EstadoItemList.NINGUNA;
 
+    }
 
+    public ItemList() {
+
+    }
+
+    public enum EstadoItemList{
+        NINGUNA,
+        ACTUAL,
+        PROXIMA,
+        OTRO
     }
 }
