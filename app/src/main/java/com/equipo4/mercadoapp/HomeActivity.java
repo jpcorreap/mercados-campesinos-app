@@ -9,13 +9,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
     private final static int GENERAL_REQUEST_CODE = 400;
 
@@ -39,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         verCampaign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Click desde ver Campaña", Toast.LENGTH_SHORT).show();
+                Toast.makeText(HomeActivity.this, "Click desde ver Campaña", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -47,19 +45,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        register.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                Toast.makeText(MainActivity.this, "Click desde registrarse", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(HomeActivity.this, "Click desde registrarse", Toast.LENGTH_SHORT).show();
 //            }
 //        });
 //        login.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                Toast.makeText(MainActivity.this, "Click desde Login", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(HomeActivity.this, "Click desde Login", Toast.LENGTH_SHORT).show();
 //            }
 //        });
         verCampaign.setOnClickListener(this);
         register.setOnClickListener(this);
         login.setOnClickListener(this);
-
     }
 
     //*create el 26/07/2021 para probes
@@ -92,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             default:
                 throw new IllegalArgumentException();
         }
-        Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+        Toast.makeText(HomeActivity.this, msg, Toast.LENGTH_SHORT).show();
 
         //*creado el 26/07/2021 para pruebas
         startActivity(pantalla);
