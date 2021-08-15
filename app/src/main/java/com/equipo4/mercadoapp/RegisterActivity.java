@@ -1,5 +1,6 @@
 package com.equipo4.mercadoapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -8,10 +9,13 @@ import android.widget.Toast;
 
 import com.equipo4.mercadoapp.model.User;
 import com.equipo4.mercadoapp.sqlite.OpenHelper;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     //UI
     TextInputEditText name, username, email, phone, password, passwordRepeat;
@@ -19,6 +23,9 @@ public class RegisterActivity extends AppCompatActivity {
 
     //SQLite
     OpenHelper helper;
+
+    //Fragment
+    SupportMapFragment mapFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +70,13 @@ public class RegisterActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         passwordRepeat = findViewById(R.id.passwordRepeat);
         register = findViewById(R.id.registerFarmer);
+        mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.location);
+        mapFragment.getMapAsync(this);
         helper = new OpenHelper(this);
     }
 
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap) {
+
+    }
 }

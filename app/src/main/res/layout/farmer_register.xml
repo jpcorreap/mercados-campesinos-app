@@ -50,16 +50,17 @@
                 android:text="Ubicación de su Finca"
                 android:textSize="15sp" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <fragment
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="8dp"
                 android:minWidth="300dp"
-                android:minHeight="300dp"
-                app:srcCompat="@drawable/ic_flat_map_gray" />
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                tools:context=".RegisterActivity"/>
 
             <TextView
                 android:layout_width="match_parent"
